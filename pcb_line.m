@@ -1,0 +1,12 @@
+I = imread('pcb_ori.png');
+bw = im2bw(I,0.5)
+bwc = imcomplement(bw);
+% % % bwe = edge(bwc);
+% % % [bwh, loc2]= imfill(bwe,'holes');
+% % % % ch = bwconvhull(bwc)
+% % % bwm = imerode(bwh,strel('disk',9));
+% % % bwt = imsubtract(bw,bwm);
+% bwp = bwskel(bwc)
+% se = strel('disk',0);
+% bwopen = imopen(bwp,se);
+bws = bwconncomp(bwc)
